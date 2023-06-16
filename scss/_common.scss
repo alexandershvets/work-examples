@@ -1,0 +1,13 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Montserrat, sans-serif;
+  @include adaptiveValue('font-size', 22, 20);
+  line-height: math.div(28, 20);
+  font-weight: 700;
+  color: $mainColor;
+  text-transform: uppercase;
+}

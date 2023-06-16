@@ -1,0 +1,261 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,700,800,900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #ebe691;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: Montserrat, sans-serif;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: #0e101a;
+}
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 85.625rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Montserrat, sans-serif;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #ebe691;
+  text-transform: uppercase;
+}
+@supports (font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem )) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem );
+  }
+}
+@supports not (font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem )) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: calc(
+      1.25rem + 0.125 * (100vw - 20rem) / 67.5
+    );
+  }
+}
+
+@supports (padding-top: clamp( 2.5rem , 2.3148148148rem  +  0.9259259259vw , 3.125rem )) {
+  .portfolio {
+    padding-top: clamp( 2.5rem , 2.3148148148rem  +  0.9259259259vw , 3.125rem );
+  }
+}
+@supports not (padding-top: clamp( 2.5rem , 2.3148148148rem  +  0.9259259259vw , 3.125rem )) {
+  .portfolio {
+    padding-top: calc(
+      2.5rem + 0.625 * (100vw - 20rem) / 67.5
+    );
+  }
+}
+@supports (padding-bottom: clamp( 2.5rem , 2.3148148148rem  +  0.9259259259vw , 3.125rem )) {
+  .portfolio {
+    padding-bottom: clamp( 2.5rem , 2.3148148148rem  +  0.9259259259vw , 3.125rem );
+  }
+}
+@supports not (padding-bottom: clamp( 2.5rem , 2.3148148148rem  +  0.9259259259vw , 3.125rem )) {
+  .portfolio {
+    padding-bottom: calc(
+      2.5rem + 0.625 * (100vw - 20rem) / 67.5
+    );
+  }
+}
+.portfolio__header {
+  margin-bottom: 2.5rem;
+}
+@supports (font-size: clamp( 2.375rem , 2.375rem  +  0vw , 2.375rem )) {
+  .portfolio__header {
+    font-size: clamp( 2.375rem , 2.375rem  +  0vw , 2.375rem );
+  }
+}
+@supports not (font-size: clamp( 2.375rem , 2.375rem  +  0vw , 2.375rem )) {
+  .portfolio__header {
+    font-size: calc(
+      2.375rem + 0 * (100vw - 20rem) / 67.5
+    );
+  }
+}
+.portfolio__row {
+  margin-bottom: 3.125rem;
+}
+.portfolio__row:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 3.125rem;
+  background-color: rgba(235, 230, 145, 0.3);
+}
+.portfolio__title {
+  color: #fefefe;
+  margin-bottom: 1.875rem;
+}
+@supports (font-size: clamp( 2rem , 1.8518518519rem  +  0.7407407407vw , 2.5rem )) {
+  .portfolio__title {
+    font-size: clamp( 2rem , 1.8518518519rem  +  0.7407407407vw , 2.5rem );
+  }
+}
+@supports not (font-size: clamp( 2rem , 1.8518518519rem  +  0.7407407407vw , 2.5rem )) {
+  .portfolio__title {
+    font-size: calc(
+      2rem + 0.5 * (100vw - 20rem) / 67.5
+    );
+  }
+}
+.portfolio__project:not(:last-child) {
+  margin-bottom: 2.1875rem;
+}
+
+.project__title {
+  color: #fefefe;
+  font-size: 1.125rem;
+}
+.project__title span {
+  color: #fff87e;
+}
+@supports (font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem )) {
+  .project__title span {
+    font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem );
+  }
+}
+@supports not (font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem )) {
+  .project__title span {
+    font-size: calc(
+      1.25rem + 0.125 * (100vw - 20rem) / 67.5
+    );
+  }
+}
+.project__title:not(:last-child) {
+  margin-bottom: 0.625em;
+}
+.project__title-link {
+  color: #fff87e;
+}
+@supports (font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem )) {
+  .project__title-link {
+    font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem );
+  }
+}
+@supports not (font-size: clamp( 1.25rem , 1.212962963rem  +  0.1851851852vw , 1.375rem )) {
+  .project__title-link {
+    font-size: calc(
+      1.25rem + 0.125 * (100vw - 20rem) / 67.5
+    );
+  }
+}
+.project__item:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.project__link {
+  color: #87aaff;
+  text-decoration: underline;
+}
+.project__descr {
+  color: #fefefe;
+}
